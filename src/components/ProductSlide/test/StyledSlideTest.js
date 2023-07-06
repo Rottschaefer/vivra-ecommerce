@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { ReactComponent as ChevronRight } from "../../assets/ChevronRight.svg";
+import { ReactComponent as ChevronRight } from "../../../assets/ChevronRight.svg";
 
 export const StyledCarousel = styled.div`
-  background-color: black;
   position: relative;
   height: 86vh;
   width: 100%;
@@ -13,32 +12,6 @@ export const StyledImgs = styled.img`
   height: 86vh;
   object-fit: cover;
   object-position: top;
-  opacity: 0.5;
-`;
-
-export const StyledText = styled.div`
-  position: absolute;
-  top: 43vh;
-  transform: translateY(-50%);
-  left: 15%;
-  z-index: 2;
-  letter-spacing: 0.02rem;
-  font-family: Montserrat, sans-serif;
-  color: white;
-  width: 35vw;
-`;
-
-export const StyledTitle = styled.h2`
-  font-size: 5.8rem;
-  font-weight: 700;
-  line-height: 8rem;
-`;
-
-export const StyledDescription = styled.h3`
-  font-family: Montserrat, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 3rem;
 `;
 
 export const StyledCarouselTrackContainer = styled.div`
@@ -48,7 +21,6 @@ export const StyledCarouselTrackContainer = styled.div`
 `;
 
 export const StyledCarouselTrack = styled.ul`
-  position: relative;
   list-style: none;
   transform: translateX(${(props) => props.amountToMove});
   transition: all 1s;
@@ -56,7 +28,6 @@ export const StyledCarouselTrack = styled.ul`
 
 export const StyledCarouselSlides = styled.li`
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
   left: ${(props) => props.position};
