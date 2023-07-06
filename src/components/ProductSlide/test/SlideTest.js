@@ -5,50 +5,27 @@ import {
   StyledCarouselSlides,
   StyledCarouselTrack,
   StyledCarouselTrackContainer,
-  StyledDescription,
   StyledImgs,
   StyledLeftButton,
   StyledRightButton,
-  StyledText,
-  StyledTitle,
-} from "./StyledProductSlide";
-import slide1 from "../../assets/shop-hero-1-product-slide-1.jpg";
-import slide2 from "../../assets/fashion-report-1-1.png";
-import slide3 from "../../assets/3.jpg";
+} from "./StyledSlideTest";
+import slide2 from "../../../assets/fashion-report-1-1.jpg";
+import slide3 from "../../../assets/Top_Retail_Trends_2023.png";
 import { useEffect, useRef, useState } from "react";
 
-export const ProductSlide = () => {
+export const SlideTest = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const imgs = [slide1, slide2, slide3];
-
-  const info = [
-    {
-      title: "New Collection",
-      description:
-        "Introducing Our Latest Collection: Unveiling Exquisite Styles for You!",
-      img: slide1,
-    },
-    {
-      title: "Don't Wait To Be Pretty",
-      description: "Receive your order in 2 days",
-      img: slide2,
-    },
-    {
-      title: "You don't have to Suffer to be Beautiful",
-      description: "Be gorgeous and comfortable with our products :) ",
-      img: slide3,
-    },
-  ];
+  const imgs = [slide2, slide3, slide2];
 
   const timeRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (timeRef.current) {
-  //     clearTimeout(timeRef.current);
-  //   }
-  //   timeRef.current = setTimeout(() => handleSlideChange(1), 5000);
-  // });
+  useEffect(() => {
+    if (timeRef.current) {
+      clearTimeout(timeRef.current);
+    }
+    timeRef.current = setTimeout(() => handleSlideChange(1), 3000);
+  });
 
   const setSlidePosition = (index) => {
     return `${100 * index}%`;
@@ -64,14 +41,10 @@ export const ProductSlide = () => {
     }
   };
 
-  const Slides = info.map((slide, index) => {
+  const Slides = imgs.map((slide, index) => {
     return (
       <StyledCarouselSlides position={setSlidePosition(index)}>
-        <StyledText>
-          <StyledTitle>{slide.title}</StyledTitle>
-          <StyledDescription>{slide.description}</StyledDescription>
-        </StyledText>
-        <StyledImgs src={slide.img} />
+        <StyledImgs src={slide} />
       </StyledCarouselSlides>
     );
   });
