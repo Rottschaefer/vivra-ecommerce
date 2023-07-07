@@ -1,13 +1,11 @@
 import GlobalStyle from "./GlobalStyles";
-import { Header } from "./components/Header/Header";
-import { ProductSlide } from "./components/ProductSlide/ProductSlide";
+import { HomePage } from "./Pages/HomePage";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <ProductSlide />
+      <HomePage />
     </>
   );
 }

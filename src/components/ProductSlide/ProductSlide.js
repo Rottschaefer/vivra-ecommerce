@@ -43,12 +43,12 @@ export const ProductSlide = () => {
 
   const timeRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (timeRef.current) {
-  //     clearTimeout(timeRef.current);
-  //   }
-  //   timeRef.current = setTimeout(() => handleSlideChange(1), 5000);
-  // });
+  useEffect(() => {
+    if (timeRef.current) {
+      clearTimeout(timeRef.current);
+    }
+    timeRef.current = setTimeout(() => handleSlideChange(1), 7000);
+  });
 
   const setSlidePosition = (index) => {
     return `${100 * index}%`;
