@@ -44,7 +44,7 @@ export const StyledDescription = styled.h3`
 export const StyledCarouselTrackContainer = styled.div`
   height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 export const StyledCarouselTrack = styled.ul`

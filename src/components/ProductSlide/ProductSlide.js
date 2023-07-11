@@ -12,34 +12,12 @@ import {
   StyledText,
   StyledTitle,
 } from "./StyledProductSlide";
-import slide1 from "../../assets/shop-hero-1-product-slide-1.jpg";
-import slide2 from "../../assets/fashion-report-1-1.png";
-import slide3 from "../../assets/3.jpg";
 import { useEffect, useRef, useState } from "react";
+import { getData } from "../../Requests/RequestData";
 
 export const ProductSlide = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const imgs = [slide1, slide2, slide3];
-
-  const info = [
-    {
-      title: "New Collection",
-      description:
-        "Introducing Our Latest Collection: Unveiling Exquisite Styles for You!",
-      img: slide1,
-    },
-    {
-      title: "Don't Wait To Be Pretty",
-      description: "Receive your order in 2 days",
-      img: slide2,
-    },
-    {
-      title: "You don't have to Suffer to be Beautiful",
-      description: "Be gorgeous and comfortable with our products :) ",
-      img: slide3,
-    },
-  ];
+  const [slides, setSlides] = useState([]);
 
   const timeRef = useRef(null);
 
@@ -50,23 +28,32 @@ export const ProductSlide = () => {
     timeRef.current = setTimeout(() => handleSlideChange(1), 7000);
   });
 
+  useEffect(() => {
+    handleDataRequest();
+  }, []);
+
+  const handleDataRequest = async () => {
+    const response = await getData("/slides");
+    setSlides(response);
+  };
+
   const setSlidePosition = (index) => {
     return `${100 * index}%`;
   };
 
   const handleSlideChange = (increment) => {
-    if (currentIndex + increment > imgs.length - 1) {
+    if (currentIndex + increment > slides.length - 1) {
       setCurrentIndex(0);
     } else if (currentIndex + increment < 0) {
-      setCurrentIndex(imgs.length - 1);
+      setCurrentIndex(slides.length - 1);
     } else {
       setCurrentIndex(currentIndex + increment);
     }
   };
 
-  const Slides = info.map((slide, index) => {
+  const Slides = slides.map((slide, index) => {
     return (
-      <StyledCarouselSlides position={setSlidePosition(index)}>
+      <StyledCarouselSlides key={index} position={setSlidePosition(index)}>
         <StyledText>
           <StyledTitle>{slide.title}</StyledTitle>
           <StyledDescription>{slide.description}</StyledDescription>
@@ -76,9 +63,10 @@ export const ProductSlide = () => {
     );
   });
 
-  const DotsNav = imgs.map((slide, index) => {
+  const DotsNav = slides.map((slide, index) => {
     return (
       <StyledCarouselIndicator
+        key={index}
         color={currentIndex === index ? "black" : "grey"}
         onClick={() => setCurrentIndex(index)}
       />
