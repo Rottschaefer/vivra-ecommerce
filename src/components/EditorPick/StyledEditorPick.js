@@ -10,6 +10,7 @@ export const StyledEditorPickContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 8rem 0rem;
+  background-color: #fafafa;
 `;
 
 export const StyledTitle = styled.h3`
@@ -115,5 +116,12 @@ export const StyledButton = styled.button`
   line-height: 2.4rem;
   letter-spacing: 0.01rem;
 
-  box-shadow: 0.2px 0.2px 120px;
+  box-shadow: 2px 5px 50px;
+
+  transition: all 0.5s;
+
+  :hover {
+    transform: translateY(-3px);
+    scale: 1.05;
+  }
 `;
