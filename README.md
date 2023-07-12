@@ -1,71 +1,77 @@
-# Getting Started with Create React App
+<h1 align="center">
+     VIVRA - Ecommerce
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![HomePage](./src/assets/Preview.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+##  🕵About
 
-### `npm start`
+In this repository you find the code for a complete Ecommerce application. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  👩🏾Who does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Eduardo Rottschaefer Oliveira
 
-### `npm test`
+Conect with me on LinkedIn! - https://www.linkedin.com/in/eduardo-rottschaefer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+##  🧭Status do Projeto
 
-### `npm run build`
+ - ⌛ In production
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  🎯Project's Purpose
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The main goal is to enhance my skills as a React Front End developer  implementing a modern clean code while diving in the React structure to enhance the app performance.
 
-### `npm run eject`
+## ☑️Functionalities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [x] User Login
+- [x] Navigation through pages
+- [x] Responsive Design
+- [x] Add products to cart
+- [x] Display the information from an ecommerce API
+- [x] Clear and user-friendly error handling
+- [x] Implemented as a single-page application (SPA) using React
+- [x] Functionality tests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 👨‍💻Technologies and Structures
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [x] ReactJS
+- [x] JavaScript
+- [x] HTML/CSS
+- [x] Styled-Components
+- [x] React Icons
+- [x] Mock Service Worker
+- [x] Axios
+- [x] Jest
+- [x] React Testing Library
+- [x] Component Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔗Deploy Link
 
-### Code Splitting
+- **Deploy Link**: [https://vivra-ecommerce.vercel.app/](https://vivra-ecommerce.vercel.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## 🛰Running the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Clone this repository on your machine with the command git clone https://github.com/Rottschaefer/vivra-ecommerce.git
+- Open the project file through the terminal
+- Run npm install command
+- Run npm start command
+- Ready! Now the application is already running on your machine :)
+- Enjoy :)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# vivra-ecommerce
+This project is under the MIT license [MIT](./LICENSE).
